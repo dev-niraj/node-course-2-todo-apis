@@ -11,7 +11,7 @@ if (!ObjectId.isValid(id)) {
 
 User.findById(id).then((users) => {
     if (!users) {
-        console.log('Id not found');
+        return console.log('Id not found');
     }
     console.log(JSON.stringify(users, undefined, 2));
 }).catch((e) => console.log(e));
